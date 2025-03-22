@@ -1,0 +1,119 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #121212;
+}
+
+.login-container {
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    animation: borderAnimation 2s infinite alternate;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 2px solid #777;
+}
+
+.input-box span {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #888;
+    transition: 0.3s;
+}
+
+.input-box input:focus + span,
+.input-box input:valid + span {
+    top: -10px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.links a {
+    color: #ffad06;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, #ff105f, #ffad06);
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ffad06, #ff105f);
+}
+
+/* Animated Border */
+@keyframes borderAnimation {
+    0% {
+        border-color: #ff105f;
+        box-shadow: 0 0 20px #ff105f;
+    }
+    25% {
+        border-color: #ffad06;
+        box-shadow: 0 0 20px #ffad06;
+    }
+    50% {
+        border-color: #00f0ff;
+        box-shadow: 0 0 20px #00f0ff;
+    }
+    75% {
+        border-color: #ff105f;
+        box-shadow: 0 0 20px #ff105f;
+    }
+    100% {
+        border-color: #ffad06;
+        box-shadow: 0 0 20px #ffad06;
+    }
+}
